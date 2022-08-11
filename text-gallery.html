@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<title>GALLERY</title>
+</head>
+<body>
+	<head>
+		<div class="container">
+			<div class="header-main">
+			 <img src="assets/images/Group 40.png">
+				<ul>
+				  <li>
+				   	<a href="index.html">HOME</a>
+				  </li>
+				  <li>
+					<a href="packages.html">PACKAGES</a>
+				  </li>
+				  <li>
+					<a href="about-us.html">ABOUT AS</a>
+				  </li>
+				  <li>
+					<a class="active" href="gallery.html">GALLERY</a>
+				  </li>
+				  <li>
+					<a href="contact-us.html">CONTACT US</a>
+				  </li>
+			    </ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</head>
+	<section class="gellery-banner-section">
+		<div class="banner-img">
+			<img src="assets/images/banner-gallery.png">
+		</div>
+		<div class="container">
+			<div class="baneer-text">
+				<h2>GALLERY</h2>
+			</div>
+		</div>
+	</section>
+	<section class="gallery-images-section">
+		<div class="container">
+			<div class="w3-content" style="max-width:1414px">
+				<div class="img-box">
+  					<div class="gallery-img-row-one">
+				  		<div class="img-1">
+							<img src="assets/images/Rectangle 2034.png">
+						</div>
+						<div class="img-2">
+							<img src="assets/images/Rectangle 2036.png">
+						</div>
+						<div class="img-3">
+							<img src="assets/images/Rectangle 2038.png">
+						</div>
+						<div class="img-4">
+							<img src="assets/images/Rectangle 2040.png">
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="gallery-img-row-two">
+						<div class="img-5">
+							<img src="assets/images/Rectangle 2035.png">
+						</div>
+						<div class="img-6">
+							<img src="assets/images/Rectangle 2037.png">
+						</div>
+						<div class="img-7">
+							<img src="assets/images/Rectangle 2039.png">
+						</div>
+						<div class="img-8">
+							<img src="assets/images/Rectangle 2041.png">
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="gallery-img-row-three">
+						<div class="img-9">
+							<img src="assets/images/Rectangle 2044.png">
+						</div>
+						<div class="img-10">
+							<img src="assets/images/Rectangle 2045.png">
+						</div>
+						<div class="img-11">
+							<img src="assets/images/Rectangle 2043.png">
+						</div>
+						<div class="img-12">
+							<img src="assets/images/Rectangle 2042.png">
+						</div>
+						<div class="clear"></div>
+					</div>
+  				</div>
+  				<div class="img-box">
+  					<div class="gallery-img-row-one">
+				  		<div class="img-1">
+							<img src="assets/images/Rectangle 2042.png">
+						</div>
+						<div class="img-2">
+							<img src="assets/images/Rectangle 2043.png">
+						</div>
+						<div class="img-3">
+							<img src="assets/images/Rectangle 2045.png">
+						</div>
+						<div class="img-4">
+							<img src="assets/images/Rectangle 2044.png">
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="gallery-img-row-two">
+						<div class="img-5">
+							<img src="assets/images/Rectangle 2034.png">
+						</div>
+						<div class="img-6">
+							<img src="assets/images/Rectangle 2036.png">
+						</div>
+						<div class="img-7">
+							<img src="assets/images/Rectangle 2038.png">
+						</div>
+						<div class="img-8">
+							<img src="assets/images/Rectangle 2040.png">
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="gallery-img-row-three">
+						<div class="img-9">
+							<img src="assets/images/Rectangle 2035.png">
+						</div>
+						<div class="img-10">
+							<img src="assets/images/Rectangle 2037.png">
+						</div>
+						<div class="img-11">
+							<img src="assets/images/Rectangle 2039.png">
+						</div>
+						<div class="img-12">
+							<img src="assets/images/Rectangle 2041.png">
+						</div>
+						<div class="clear"></div>
+					</div>
+  				</div>
+			</div>
+			<div class="w3-center">
+            	<div class="w3-section">
+            		<button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+            		<button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+           		</div>
+            	<button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+                <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+                <button class="w3-button demo" onclick="currentDiv(3)">3</button>
+                <button class="w3-button demo" onclick="currentDiv(2)">4</button> 
+                <button class="w3-button demo" onclick="currentDiv(3)">5</button>  
+            </div>
+            <script>
+			 var slideIndex = 1;
+			 showDivs(slideIndex);
+
+			function plusDivs(n) {
+  			  showDivs(slideIndex += n);
+			}
+
+			function currentDiv(n) {
+  			  showDivs(slideIndex = n);
+			}
+
+			function showDivs(n) {
+  			  var i;
+  			  var x = document.getElementsByClassName("img-box");
+  			  var dots = document.getElementsByClassName("demo");
+  			  if (n > x.length) {slideIndex = 1}    
+  			  if (n < 1) {slideIndex = x.length}
+  			  for (i = 0; i < x.length; i++) {
+    		  x[i].style.display = "none";  
+  			}
+  			  for (i = 0; i < dots.length; i++) {
+    		  dots[i].className = dots[i].className.replace(" w3-red", "");
+  			}
+  			  x[slideIndex-1].style.display = "block";  
+  			  dots[slideIndex-1].className += " w3-red";
+			}
+			</script>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container">
+			<img src="assets/images/Group 40.png">
+			<div class="footer-row-one">
+				<div class="footer-para">
+					<p>Lorem ipsum proin gravida velit auctor aliquet. Aenean sollicitu din, lorem auci elit consequat ipsutissem niuis sed odio sit amet a sit amet.</p>
+					<p>Lorem ipsum proin gravida velit auctor aliquet. Aenean sollicitu din.</p>
+				</div>
+				<div class="opening-hours">
+					<div class="opening-hours-text">
+					   <h3>Opening Hours</h3>
+					   <h2>Hip Hop Dance : 07:00 - 21:00</h2>
+					   <h2>Ballet : 07:00 - 21:00</h2>
+					   <h2>Break Dance : 18:00 - 24:00</h2>
+					   <h2>Salsa: 8:00 - 16:00</h2>
+					   <h2>TAB Dancing: 9:00 - 23:00</h2>
+					</div>
+				</div>
+				<div class="quick-link">
+					<h3>QUICK LINKS</h3>
+					<ul>
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="about-us.html">About Us</a>
+						</li>
+						<li>
+							<a href="packages.html">Packages</a>
+						</li>
+						<li>
+							<a href="">About Dances</a>
+						</li>
+						<li>
+							<a href="gallery.html">Gallery</a>
+						</li>
+					</ul>
+				</div>
+				<div class="contact-information">
+					<h3>Contact Information</h3>
+					<div class="phone">
+                       <img src="assets/images/Group 1982.png">
+					   <h3>000-111-2222</h3>
+					</div>
+					<div class="email">
+						<img src="assets/images/mail.png">
+					    <h2>westhent@info.com</h2>
+					</div>
+					<div class="address">
+						<img src="assets/images/pin (2).png">
+					    <h2>2222 Broad Street, proin gravida 
+                        velit auctor aliquet. Aenean sollicitu din. </h2>
+					</div>
+					<div class="ico">
+						<ul>
+							<li>
+								<a href=""><img src="assets/images/facebook-rect.png"></a>
+							</li>
+							<li>
+								<a href=""><img src="assets/images/instagram-filled.png"></a>
+							</li>
+							<li>
+								<a href=""><img src="assets/images/skype.png"></a>
+							</li>
+							<li>
+								<a href=""><img src="assets/images/linkedin-rect.png"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="footer-row-two">
+				<h3>© copyright - 2021 stylize</h3>
+				<h2>website design & develop by Geeksroot</h2>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
